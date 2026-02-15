@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더캐스트</title>
+    <meta name="description" content="더캐스트">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+
+        :root {
+            color-scheme: light;
+            --bg: linear-gradient(140deg, #f3fbf3 0%, #e9f7eb 45%, #e0f3e4 100%);
+            --card-bg: rgba(255, 255, 255, 0.82);
+            --card-border: rgba(168, 210, 178, 0.42);
+            --text-primary: #244231;
+            --text-secondary: #3f6450;
+            --accent: #8fcaa2;
+            --shadow: 0 28px 90px -34px rgba(94, 143, 113, 0.34);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 42px 16px 56px;
+            background: var(--bg);
+            font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+        }
+
+        main {
+            width: min(440px, 100%);
+            padding: 48px clamp(24px, 6vw, 42px);
+            border-radius: 28px;
+            background: var(--card-bg);
+            backdrop-filter: blur(22px);
+            border: 1px solid var(--card-border);
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        main::before {
+            content: "";
+            position: absolute;
+            inset: -160px auto auto -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(185, 228, 196, 0.68), rgba(185, 228, 196, 0));
+            pointer-events: none;
+        }
+
+        main::after {
+            content: "";
+            position: absolute;
+            inset: auto -120px -160px auto;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 240, 222, 0.64), rgba(212, 240, 222, 0));
+            pointer-events: none;
+        }
+
+        .app-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-icon {
+            width: 96px;
+            height: 96px;
+            margin: 0;
+            border-radius: 22px;
+            object-fit: cover;
+            box-shadow:
+                0 22px 48px -24px rgba(114, 175, 136, 0.52),
+                0 0 0 6px rgba(255, 255, 255, 0.45),
+                0 0 38px rgba(168, 222, 183, 0.55);
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2.1rem, 5vw, 2.5rem);
+            letter-spacing: -0.01em;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            margin: 0 auto 32px;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: none;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 22px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .btn img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .btn-ios {
+            background: linear-gradient(125deg, #7db992, #5c9f74);
+            box-shadow: 0 16px 48px -28px rgba(92, 159, 116, 0.55);
+        }
+
+        .btn-android {
+            background: linear-gradient(125deg, #7db992, #5c9f74);
+            box-shadow: 0 16px 48px -28px rgba(92, 159, 116, 0.55);
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        footer {
+            margin-top: 36px;
+            font-size: 0.85rem;
+            color: rgba(36, 66, 49, 0.62);
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="app-icons">
+            <img src="https://www.lotteshopping.com/resources/img/favicon/favicon.png" alt="롯데백화점 아이콘" class="app-icon">
+            <img src="icon.png" alt="The Cast Icon" class="app-icon">
+        </div>
+        <h1>롯데백화점 뷰티 에디션</h1>
+        <p>롯데백화점이 선별하고 더캐스트가 완성한 뷰티의 미학</p>
+
+        <div class="btn-group">
+            <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
+                class="btn btn-ios">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+                App Store에서 다운로드
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.blacksmith.castshop" class="btn btn-android">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+                    alt="Google Play Logo">
+                Google Play에서 다운로드
+            </a>
+        </div>
+
+        <footer>&copy; 2026 블랙스미스. 모든 권리 보유 .</footer>
+    </main>
+</body>
+
+</html>
