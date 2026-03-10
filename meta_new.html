@@ -672,8 +672,8 @@
             margin-top: 18px;
             display: grid;
             grid-auto-flow: column;
-            grid-auto-columns: minmax(220px, 78vw);
-            gap: 14px;
+            grid-auto-columns: minmax(200px, 68vw);
+            gap: 4px;
             overflow-x: auto;
             padding-bottom: 6px;
             scroll-snap-type: x mandatory;
@@ -690,6 +690,7 @@
         }
 
         .selection-card {
+            margin: 0;
             scroll-snap-align: start;
             overflow: hidden;
             border-radius: 22px;
@@ -834,7 +835,7 @@
             }
 
             .selection-gallery {
-                grid-auto-columns: minmax(240px, 28vw);
+                grid-auto-columns: minmax(220px, 24vw);
             }
 
             .content-grid {
@@ -872,7 +873,7 @@
             }
 
             .selection-gallery {
-                grid-auto-columns: minmax(250px, 22vw);
+                grid-auto-columns: minmax(220px, 20vw);
             }
         }
 
@@ -996,8 +997,8 @@
                         <div class="preview-card">
                             <div class="preview-top">
                                 <div>
-                                    <strong>앱 설치 전에 바로 이해되는 콘텐츠 미리보기</strong>
-                                    <span>광고에서 기대한 라이브 쇼핑, 특가, 리뷰 흐름이 앱 안에서 어떻게 보이는지 먼저 보여줍니다.</span>
+                                    <strong>설치하면 이런 화면을 바로 보게 됩니다</strong>
+                                    <span>오늘의 라이브, 단독 특가, 실시간 리뷰가 앱에서 어떻게 보이는지 한눈에 확인해보세요.</span>
                                 </div>
                                 <div class="live-pill">LIVE 20:00</div>
                             </div>
@@ -1007,8 +1008,8 @@
                                     <img src="thecast_character.png" alt="더캐스트 캐릭터" class="mascot-image">
                                 </div>
                                 <div class="mascot-copy">
-                                    <strong>첫 화면에서 다운로드해야 할 이유가 바로 보이게</strong>
-                                    <p>광고를 클릭한 직후 사용자가 찾는 것은 서비스 설명보다 라이브, 특가, 리뷰 경험입니다. 그 흐름이 첫 화면에서 끊기지 않도록 구성했습니다.</p>
+                                    <strong>설치하면 라이브와 혜택을 바로 이어서 볼 수 있어요</strong>
+                                    <p>광고에서 본 분위기 그대로 라이브 일정, 특가, 리뷰 포인트가 첫 화면에서 바로 보여서 설치할 이유를 빠르게 확인할 수 있습니다.</p>
                                     <div class="mascot-badges" aria-label="캐릭터 메시지">
                                         <span class="mascot-badge">오늘의 라이브</span>
                                         <span class="mascot-badge">앱 전용 특가</span>
@@ -1021,19 +1022,19 @@
                                 <article class="feature-card">
                                     <span class="feature-label">오늘의 라이브</span>
                                     <strong>지금 열리는 백화점 뷰티 라이브 방송 확인</strong>
-                                    <p>광고에서 보고 들어온 라이브 흐름을 끊지 않고 바로 이어서 탐색할 수 있습니다.</p>
+                                    <p>광고에서 보고 들어온 라이브를 앱에서 바로 이어서 확인할 수 있습니다.</p>
                                 </article>
 
                                 <article class="feature-card">
                                     <span class="feature-label">인기 브랜드</span>
                                     <strong>엄선된 프리미엄 뷰티 브랜드 셀렉션</strong>
-                                    <p>입점 기준을 통과한 프리미엄 브랜드를 보기 좋게 모아 빠르게 탐색할 수 있습니다.</p>
+                                    <p>엄선된 프리미엄 브랜드를 한눈에 둘러보고 관심 브랜드를 빠르게 찾을 수 있습니다.</p>
                                 </article>
 
                                 <article class="feature-card">
                                     <span class="feature-label">앱 전용 특가</span>
                                     <strong>라이브 한정 혜택과 앱 전용 오퍼를 한 번에</strong>
-                                    <p>가격 메리트와 앱 설치 이유가 바로 보이도록 첫 화면 기대값과 연결합니다.</p>
+                                    <p>앱에서만 열리는 혜택과 라이브 특가를 한 번에 확인할 수 있어 설치 이유가 분명해집니다.</p>
                                     <div class="feature-inline">
                                         <span>오늘 저녁 8시</span>
                                         <span>실시간 Q&amp;A</span>
@@ -1044,7 +1045,7 @@
                                 <article class="feature-card">
                                     <span class="feature-label">베스트 상품</span>
                                     <strong>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템</strong>
-                                    <p>단순 할인몰이 아니라 선택 이유가 있는 프리미엄 상품 탐색 경험을 전달합니다.</p>
+                                    <p>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템을 중심으로 빠르게 고를 수 있습니다.</p>
                                 </article>
                             </div>
                         </div>
@@ -1055,21 +1056,21 @@
             <section class="section">
                 <div class="panel">
                     <p class="section-kicker">Why The Cast</p>
-                    <h2 class="section-title">왜 지금 더캐스트를 설치해야 하는지 한눈에 보이게</h2>
-                    <p class="section-desc">광고 유입 사용자가 설치 전에 신뢰할 수 있도록, 프리미엄 브랜드 셀렉션과 라이브 혜택, 앱 전용 특가를 간결하게 정리했습니다.</p>
+                    <h2 class="section-title">지금 설치하면 바로 이런 점이 좋아요</h2>
+                    <p class="section-desc">라이브에서 본 상품이 궁금했다면, 앱에서 브랜드와 혜택을 더 쉽고 빠르게 확인할 수 있습니다.</p>
 
                     <div class="trust-grid">
                         <article class="trust-card">
                             <strong>프리미엄 브랜드 셀렉션</strong>
-                            <p>입점 기준을 통과한 브랜드 중심으로 구성해 일반 할인몰과 다른 탐색 신뢰도를 전달합니다.</p>
+                            <p>입점 기준을 통과한 브랜드만 모아두어 더 믿고 편하게 둘러볼 수 있습니다.</p>
                         </article>
                         <article class="trust-card">
                             <strong>라이브 혜택</strong>
-                            <p>방송 중 실시간 소개와 함께 구성 혜택, 사용 포인트, 리뷰 흐름을 바로 확인할 수 있습니다.</p>
+                            <p>방송 중 소개되는 구성 혜택, 사용 포인트, 리뷰 흐름을 놓치지 않고 확인할 수 있습니다.</p>
                         </article>
                         <article class="trust-card">
                             <strong>앱 전용 특가</strong>
-                            <p>설치 직후 확인 가능한 전용 혜택으로 광고 클릭 이후의 전환 동기를 더 강하게 만듭니다.</p>
+                            <p>앱에서만 열리는 혜택이 있어 지금 설치해야 할 이유를 더 분명하게 느낄 수 있습니다.</p>
                         </article>
                     </div>
                 </div>
@@ -1078,14 +1079,14 @@
             <section class="section">
                 <div class="panel">
                     <p class="section-kicker">Selection Criteria</p>
-                    <h2 class="section-title">실제 입점 브랜드 선정 조건 페이지도 함께 확인할 수 있게</h2>
-                    <p class="section-desc">광고 유입 사용자가 더캐스트의 신뢰 기준을 직관적으로 느낄 수 있도록, 실제 입점 조건 이미지를 그대로 확인하는 섹션을 추가했습니다.</p>
+                    <h2 class="section-title">브랜드를 고르는 기준도 직접 확인해보세요</h2>
+                    <p class="section-desc">아무 브랜드나 올라오는 곳이 아니라는 점을, 실제 입점 기준 이미지로 바로 확인할 수 있습니다.</p>
 
                     <div class="selection-intro">
                         <div class="selection-copy">
-                            <strong>더캐스트는 아무 브랜드나 모으는 앱이 아니라, 명확한 기준으로 브랜드를 선별하는 플랫폼이라는 점을 시각적으로 보여줍니다.</strong>
-                            <p>비건, 유기농, 크루얼티 프리, 친환경, ESG, 글로벌 브랜드, 장인정신, 더마, 의료기기 인증, 임상시험 제품까지. 실제 페이지를 좌우로 넘기며 기준을 확인할 수 있게 구성했습니다.</p>
-                            <div class="selection-note">좌우로 넘겨 10개 기준 페이지 보기</div>
+                            <strong>더캐스트는 기준을 통과한 브랜드만 선별해 보여드립니다.</strong>
+                            <p>비건, 유기농, 크루얼티 프리, 친환경, ESG, 글로벌 브랜드, 장인정신, 더마, 의료기기 인증, 임상시험 제품까지. 아래 이미지를 넘기며 입점 기준을 직접 확인해보세요.</p>
+                            <div class="selection-note">좌우로 넘겨 입점 기준 보기</div>
                         </div>
                         <div class="selection-cover">
                             <img src="selection_pages/selection_cover.webp" alt="더캐스트 입점 브랜드 선정 조건 표지">
@@ -1170,13 +1171,13 @@
             <section class="section">
                 <div class="panel">
                     <p class="section-kicker">In The App</p>
-                    <h2 class="section-title">앱 안에서 보게 될 핵심 콘텐츠</h2>
-                    <p class="section-desc">설치 전에도 사용자가 앱 안에서 무엇을 보게 되는지 바로 이해할 수 있도록, 주요 탐색 화면을 목업 카드로 정리했습니다.</p>
+                    <h2 class="section-title">설치하면 이런 콘텐츠를 바로 볼 수 있어요</h2>
+                    <p class="section-desc">라이브, 브랜드, 특가, 베스트 상품까지 앱 안에서 어떤 화면을 보게 되는지 미리 확인해보세요.</p>
 
                     <div class="content-grid">
                         <article class="content-item">
                             <strong><span>오늘의 라이브</span><span>Live</span></strong>
-                            <p>오늘 열리는 백화점 뷰티 라이브 편성과 실시간 방송 혜택을 빠르게 확인할 수 있습니다.</p>
+                            <p>오늘 열리는 백화점 뷰티 라이브 편성과 실시간 방송 혜택을 바로 확인할 수 있습니다.</p>
                         </article>
                         <article class="content-item">
                             <strong><span>인기 브랜드</span><span>Premium</span></strong>
@@ -1184,7 +1185,7 @@
                         </article>
                         <article class="content-item">
                             <strong><span>앱 전용 특가</span><span>Only App</span></strong>
-                            <p>앱에서만 열리는 한정 오퍼와 신규 회원 혜택을 한 화면에서 확인할 수 있습니다.</p>
+                            <p>앱에서만 열리는 한정 오퍼와 신규 회원 혜택을 한 화면에서 바로 확인할 수 있습니다.</p>
                         </article>
                         <article class="content-item">
                             <strong><span>베스트 상품</span><span>Best</span></strong>
@@ -1198,7 +1199,7 @@
                 <div class="panel download-panel">
                     <p class="section-kicker">Download</p>
                     <h2 class="section-title">지금 앱에서 확인하세요</h2>
-                    <p class="section-desc">신규 회원 혜택, 앱 전용 특가, 라이브 커머스 편성까지. 더캐스트 앱에서 프리미엄 K-뷰티를 가장 빠르게 만나보세요.</p>
+                    <p class="section-desc">신규 회원 혜택, 앱 전용 특가, 라이브 편성까지. 지금 설치하고 더캐스트에서 바로 확인해보세요.</p>
 
                     <div class="download-actions">
                         <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
@@ -1231,7 +1232,7 @@
                         </a>
                     </div>
 
-                    <p class="download-tip">광고에서 바로 넘어온 사용자도 서비스 이해, 혜택 인지, 신뢰 포인트 확인까지 3초 안에 이어지도록 설계한 전환 중심 A안입니다.</p>
+                    <p class="download-tip">지금 설치하고 라이브 일정, 앱 전용 특가, 신규 회원 혜택을 바로 확인해보세요.</p>
                 </div>
             </section>
 
