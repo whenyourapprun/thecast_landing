@@ -10,25 +10,27 @@
     <meta property="og:title" content="더캐스트 | 백화점 프리미엄 K-뷰티를 라이브로 만나는 앱">
     <meta property="og:description" content="엄선된 브랜드, 실시간 라이브 리뷰, 단독 혜택을 더캐스트에서 확인하세요.">
     <meta property="og:image" content="thecast_logo.png">
-    <meta name="theme-color" content="#f4efe7">
+    <meta name="theme-color" content="#98FB98">
     <link rel="icon" type="image/x-icon" href="thecast_logo.png">
     <link rel="icon" type="image/png" sizes="64x64" href="thecast_logo.png">
     <style>
         :root {
             color-scheme: light;
-            --bg: #f5f0e8;
-            --bg-soft: #f9f5ef;
-            --surface: rgba(255, 255, 255, 0.8);
-            --surface-strong: rgba(255, 255, 255, 0.92);
+            --bg: #f3fff3;
+            --bg-soft: #ecffec;
+            --surface: rgba(255, 255, 255, 0.84);
+            --surface-strong: rgba(255, 255, 255, 0.94);
             --surface-dark: #1f2421;
-            --line: rgba(59, 77, 63, 0.12);
-            --line-strong: rgba(59, 77, 63, 0.2);
+            --line: rgba(69, 123, 69, 0.14);
+            --line-strong: rgba(69, 123, 69, 0.22);
             --text: #1f2a23;
-            --muted: #5b665d;
-            --accent: #284d3a;
-            --accent-soft: #dfe8de;
-            --accent-warm: #b98a5f;
-            --shadow: 0 24px 80px -36px rgba(42, 54, 46, 0.28);
+            --muted: #4f6854;
+            --accent: #2e6b37;
+            --accent-soft: #98FB98;
+            --accent-soft-2: #c8ffc8;
+            --accent-strong: #73d873;
+            --accent-warm: #7edb7e;
+            --shadow: 0 24px 80px -36px rgba(63, 118, 63, 0.22);
             --radius-lg: 28px;
             --radius-md: 22px;
             --radius-sm: 16px;
@@ -49,9 +51,9 @@
             font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
             color: var(--text);
             background:
-                radial-gradient(circle at top left, rgba(190, 205, 190, 0.45), transparent 32%),
-                radial-gradient(circle at top right, rgba(225, 206, 182, 0.38), transparent 28%),
-                linear-gradient(180deg, #fbf8f3 0%, #f3ece3 48%, #efe7de 100%);
+                radial-gradient(circle at top left, rgba(152, 251, 152, 0.34), transparent 32%),
+                radial-gradient(circle at top right, rgba(200, 255, 200, 0.3), transparent 28%),
+                linear-gradient(180deg, #f8fff8 0%, #efffef 46%, #e7fbe7 100%);
         }
 
         img {
@@ -92,7 +94,7 @@
             left: -90px;
             width: 260px;
             height: 260px;
-            background: radial-gradient(circle, rgba(205, 221, 210, 0.74), rgba(205, 221, 210, 0));
+            background: radial-gradient(circle, rgba(152, 251, 152, 0.34), rgba(152, 251, 152, 0));
         }
 
         .frame::after {
@@ -100,7 +102,7 @@
             bottom: -120px;
             width: 260px;
             height: 260px;
-            background: radial-gradient(circle, rgba(221, 201, 181, 0.58), rgba(221, 201, 181, 0));
+            background: radial-gradient(circle, rgba(200, 255, 200, 0.34), rgba(200, 255, 200, 0));
         }
 
         .hero {
@@ -172,7 +174,7 @@
             height: 60px;
             border-radius: 18px;
             object-fit: cover;
-            box-shadow: 0 18px 32px -22px rgba(40, 77, 58, 0.4);
+            box-shadow: 0 18px 32px -22px rgba(92, 168, 92, 0.36);
         }
 
         .brand-name {
@@ -214,7 +216,7 @@
             gap: 8px;
             padding: 10px 14px;
             border-radius: 999px;
-            background: rgba(40, 77, 58, 0.08);
+            background: rgba(152, 251, 152, 0.22);
             color: var(--accent);
             font-size: 0.88rem;
             font-weight: 700;
@@ -234,15 +236,16 @@
             padding: 15px 16px;
             border-radius: 18px;
             text-decoration: none;
-            color: #fff;
-            background: linear-gradient(135deg, #253f31 0%, #345a45 100%);
-            box-shadow: 0 20px 42px -24px rgba(37, 63, 49, 0.62);
+            color: #16301a;
+            background: linear-gradient(135deg, #98FB98 0%, #84ef84 100%);
+            box-shadow: 0 20px 42px -24px rgba(114, 208, 114, 0.52);
             transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
         }
 
         .store-button.secondary {
-            background: linear-gradient(135deg, #876746 0%, #b2875f 100%);
-            box-shadow: 0 20px 42px -24px rgba(135, 103, 70, 0.55);
+            color: #17361c;
+            background: linear-gradient(135deg, #c8ffc8 0%, #98FB98 100%);
+            box-shadow: 0 20px 42px -24px rgba(114, 208, 114, 0.44);
         }
 
         .store-button:hover,
@@ -316,9 +319,9 @@
         .preview-card {
             padding: 18px;
             border-radius: 26px;
-            background: linear-gradient(180deg, rgba(33, 40, 36, 0.98), rgba(48, 59, 51, 0.98));
-            color: #f8f6f0;
-            box-shadow: 0 28px 52px -32px rgba(27, 35, 30, 0.75);
+            background: linear-gradient(180deg, rgba(66, 104, 66, 0.96), rgba(97, 145, 97, 0.96));
+            color: #f7fff7;
+            box-shadow: 0 28px 52px -32px rgba(83, 135, 83, 0.45);
         }
 
         .preview-top {
@@ -339,7 +342,7 @@
             display: block;
             margin-top: 4px;
             font-size: 0.82rem;
-            color: rgba(248, 246, 240, 0.72);
+            color: rgba(247, 255, 247, 0.78);
         }
 
         .live-pill {
@@ -348,8 +351,82 @@
             background: rgba(255, 255, 255, 0.1);
             font-size: 0.76rem;
             font-weight: 700;
-            color: #fff0df;
+            color: #f1fff1;
             white-space: nowrap;
+        }
+
+        .preview-hero {
+            display: grid;
+            gap: 14px;
+            margin-bottom: 14px;
+            padding: 14px;
+            border-radius: 22px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .mascot-stage {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            background:
+                radial-gradient(circle at top left, rgba(152, 251, 152, 0.34), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.18), transparent 28%),
+                linear-gradient(180deg, rgba(245, 255, 245, 0.98), rgba(198, 255, 198, 0.92));
+            min-height: 260px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 18px 10px 0;
+        }
+
+        .mascot-stage::before {
+            content: "";
+            position: absolute;
+            inset: auto auto 16px 50%;
+            width: 62%;
+            height: 20px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: rgba(25, 46, 36, 0.12);
+            filter: blur(8px);
+        }
+
+        .mascot-image {
+            position: relative;
+            z-index: 1;
+            width: min(100%, 320px);
+            filter: drop-shadow(0 16px 26px rgba(71, 134, 71, 0.2));
+        }
+
+        .mascot-copy strong {
+            display: block;
+            font-size: 1.08rem;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+        }
+
+        .mascot-copy p {
+            margin: 8px 0 0;
+            font-size: 0.86rem;
+            line-height: 1.6;
+            color: rgba(247, 255, 247, 0.8);
+        }
+
+        .mascot-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .mascot-badge {
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(248, 246, 240, 0.88);
+            font-size: 0.74rem;
+            font-weight: 700;
         }
 
         .feature-grid {
@@ -482,11 +559,121 @@
             margin-top: 18px;
         }
 
+        .selection-intro {
+            display: grid;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .selection-copy {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(236, 255, 236, 0.92));
+        }
+
+        .selection-copy strong {
+            display: block;
+            font-size: 1.05rem;
+            line-height: 1.4;
+            letter-spacing: -0.02em;
+        }
+
+        .selection-copy p {
+            margin: 10px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.62;
+        }
+
+        .selection-note {
+            margin-top: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 12px;
+            border-radius: 999px;
+            background: rgba(152, 251, 152, 0.22);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .selection-cover {
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 18px 36px -28px rgba(31, 42, 35, 0.26);
+        }
+
+        .selection-cover img {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+        }
+
+        .selection-gallery {
+            margin-top: 18px;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(220px, 78vw);
+            gap: 14px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+
+        .selection-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .selection-gallery::-webkit-scrollbar-thumb {
+            background: rgba(126, 219, 126, 0.46);
+            border-radius: 999px;
+        }
+
+        .selection-card {
+            scroll-snap-align: start;
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 16px 34px -28px rgba(31, 42, 35, 0.24);
+        }
+
+        .selection-card img {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            background: #ddffdd;
+        }
+
+        .selection-card figcaption {
+            padding: 12px 14px 14px;
+        }
+
+        .selection-card strong {
+            display: block;
+            font-size: 0.94rem;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+        }
+
+        .selection-card span {
+            display: block;
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
         .content-item {
             padding: 18px;
             border-radius: var(--radius-md);
             border: 1px solid var(--line);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 247, 243, 0.92));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(236, 255, 236, 0.92));
         }
 
         .content-item strong {
@@ -517,17 +704,17 @@
             overflow: hidden;
             background:
                 radial-gradient(circle at top right, rgba(255, 255, 255, 0.24), transparent 30%),
-                linear-gradient(135deg, #24362e 0%, #395746 100%);
-            color: #f7f2ea;
+                linear-gradient(135deg, #6ecf6e 0%, #98FB98 100%);
+            color: #16301a;
         }
 
         .download-panel .section-kicker,
         .download-panel .section-desc {
-            color: rgba(247, 242, 234, 0.8);
+            color: rgba(22, 48, 26, 0.8);
         }
 
         .download-panel .section-title {
-            color: #fff;
+            color: #143117;
         }
 
         .download-panel .section-kicker {
@@ -544,7 +731,7 @@
             margin-top: 14px;
             font-size: 0.84rem;
             line-height: 1.6;
-            color: rgba(247, 242, 234, 0.72);
+            color: rgba(22, 48, 26, 0.74);
         }
 
         .footer {
@@ -576,9 +763,23 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .preview-hero {
+                grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+                align-items: center;
+            }
+
             .trust-grid,
             .content-grid {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .selection-intro {
+                grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.85fr);
+                align-items: center;
+            }
+
+            .selection-gallery {
+                grid-auto-columns: minmax(240px, 28vw);
             }
 
             .content-grid {
@@ -613,6 +814,10 @@
 
             .feature-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .selection-gallery {
+                grid-auto-columns: minmax(250px, 22vw);
             }
         }
 
@@ -700,8 +905,8 @@
 
                         <div class="hero-proof" aria-label="핵심 신뢰 포인트">
                             <div class="proof-item">
-                                <strong>프리미엄 브랜드 셀렉션</strong>
-                                <span>백화점 감도의 엄선된 K-뷰티 큐레이션</span>
+                                <strong>엄격한 입점 기준 셀렉션</strong>
+                                <span>비건, 유기농, 더마 등 기준을 통과한 브랜드 큐레이션</span>
                             </div>
                             <div class="proof-item">
                                 <strong>라이브 혜택</strong>
@@ -719,16 +924,31 @@
                             <div class="preview-top">
                                 <div>
                                     <strong>지금 앱에서 이런 화면을 만나게 됩니다</strong>
-                                    <span>프리미엄 K-뷰티를 빠르게 이해하도록 구성한 미리보기</span>
+                                    <span>캐릭터와 함께 더캐스트의 라이브 쇼핑 경험을 직관적으로 보여주는 미리보기</span>
                                 </div>
                                 <div class="live-pill">LIVE 20:00</div>
+                            </div>
+
+                            <div class="preview-hero">
+                                <div class="mascot-stage">
+                                    <img src="thecast_character.png" alt="더캐스트 캐릭터" class="mascot-image">
+                                </div>
+                                <div class="mascot-copy">
+                                    <strong>더캐스트 캐릭터가 전하는 라이브 쇼핑 무드</strong>
+                                    <p>라이브, 혜택, 쇼핑의 즐거움을 보다 친근하게 전달하면서도 전체 톤은 프리미엄 K-뷰티 플랫폼 감도를 유지하도록 구성했습니다.</p>
+                                    <div class="mascot-badges" aria-label="캐릭터 메시지">
+                                        <span class="mascot-badge">LIVE 큐레이션</span>
+                                        <span class="mascot-badge">앱 전용 혜택</span>
+                                        <span class="mascot-badge">친근한 브랜드 경험</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="feature-grid">
                                 <article class="feature-card">
                                     <span class="feature-label">인기 브랜드</span>
-                                    <strong>설화수, 라메르, 에스티 로더, 조선미녀</strong>
-                                    <p>백화점에서 찾던 프리미엄 브랜드를 한 곳에서 비교하고 라이브로 확인합니다.</p>
+                                    <strong>비건, 유기농, 더마, 글로벌 브랜드 셀렉션</strong>
+                                    <p>더캐스트 입점 기준을 통과한 K-뷰티 브랜드를 한 곳에서 탐색하고 라이브로 확인합니다.</p>
                                 </article>
 
                                 <article class="feature-card">
@@ -739,8 +959,8 @@
 
                                 <article class="feature-card">
                                     <span class="feature-label">라이브 예정</span>
-                                    <strong>롯데백화점 뷰티 셀렉션 라이브</strong>
-                                    <p>전문 호스트가 사용감, 추천 포인트, 구성 혜택을 실시간으로 소개합니다.</p>
+                                    <strong>엄선 브랜드 라이브 셀렉션</strong>
+                                    <p>전문 호스트가 브랜드 스토리, 사용감, 추천 포인트와 구성 혜택을 실시간으로 소개합니다.</p>
                                     <div class="feature-inline">
                                         <span>오늘 저녁 8시</span>
                                         <span>실시간 Q&amp;A</span>
@@ -767,8 +987,8 @@
 
                     <div class="trust-grid">
                         <article class="trust-card">
-                            <strong>프리미엄 브랜드 셀렉션</strong>
-                            <p>신뢰할 수 있는 브랜드 중심으로 큐레이션해 처음 방문한 사용자도 탐색이 쉽습니다.</p>
+                            <strong>엄격한 입점 기준 셀렉션</strong>
+                            <p>비건, 유기농, 크루얼티 프리, 더마 등 내부 입점 기준을 바탕으로 선별해 탐색 신뢰도를 높입니다.</p>
                         </article>
                         <article class="trust-card">
                             <strong>라이브 혜택</strong>
@@ -784,6 +1004,98 @@
 
             <section class="section">
                 <div class="panel">
+                    <p class="section-kicker">Selection Criteria</p>
+                    <h2 class="section-title">실제 입점 브랜드 선정 조건 페이지도 함께 확인할 수 있게</h2>
+                    <p class="section-desc">광고 유입 사용자가 더캐스트의 신뢰 기준을 직관적으로 느낄 수 있도록, 실제 입점 조건 이미지를 그대로 확인하는 섹션을 추가했습니다.</p>
+
+                    <div class="selection-intro">
+                        <div class="selection-copy">
+                            <strong>더캐스트는 아무 브랜드나 모으는 앱이 아니라, 명확한 기준으로 브랜드를 선별하는 플랫폼이라는 점을 시각적으로 보여줍니다.</strong>
+                            <p>비건, 유기농, 크루얼티 프리, 친환경, ESG, 글로벌 브랜드, 장인정신, 더마, 의료기기 인증, 임상시험 제품까지. 실제 페이지를 좌우로 넘기며 기준을 확인할 수 있게 구성했습니다.</p>
+                            <div class="selection-note">좌우로 넘겨 10개 기준 페이지 보기</div>
+                        </div>
+                        <div class="selection-cover">
+                            <img src="selection_pages/selection_cover.webp" alt="더캐스트 입점 브랜드 선정 조건 표지">
+                        </div>
+                    </div>
+
+                    <div class="selection-gallery" aria-label="입점 브랜드 선정 조건 이미지 갤러리">
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_01_vegan.webp" alt="비건 기준 이미지">
+                            <figcaption>
+                                <strong>1. Vegan</strong>
+                                <span>동물 유래 성분 배제와 동물 실험 금지 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_02_organic.webp" alt="유기농 기준 이미지">
+                            <figcaption>
+                                <strong>2. Organic</strong>
+                                <span>천연 유래 및 유기농 성분 인증 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_03_cruelty_free.webp" alt="크루얼티 프리 기준 이미지">
+                            <figcaption>
+                                <strong>3. Cruelty-Free</strong>
+                                <span>동물 보호와 실험 금지 인증 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_04_eco.webp" alt="친환경 기준 이미지">
+                            <figcaption>
+                                <strong>4. Eco-Friendly</strong>
+                                <span>친환경 생산, 업사이클링, 친환경 패키지 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_05_esg.webp" alt="ESG 기준 이미지">
+                            <figcaption>
+                                <strong>5. ESG</strong>
+                                <span>사회 공존 활동과 지속 가능한 경영 실천 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_06_global.webp" alt="글로벌 브랜드 기준 이미지">
+                            <figcaption>
+                                <strong>6. Global Brand</strong>
+                                <span>독자적인 철학을 가진 해외 브랜드 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_07_craftsmanship.webp" alt="장인정신 기준 이미지">
+                            <figcaption>
+                                <strong>7. Craftsmanship</strong>
+                                <span>고유 기술력과 장인정신을 갖춘 고품질 브랜드 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_08_derma.webp" alt="더마 브랜드 기준 이미지">
+                            <figcaption>
+                                <strong>8. Derma</strong>
+                                <span>피부 과학 기술 기반의 기능성과 저자극 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_09_medical.webp" alt="의료기기 등록인증 기준 이미지">
+                            <figcaption>
+                                <strong>9. Medical Certification</strong>
+                                <span>의료기기 인증 및 등록 완료 기준</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="selection-card">
+                            <img src="selection_pages/selection_10_clinical.webp" alt="임상시험 제품 기준 이미지">
+                            <figcaption>
+                                <strong>10. Clinical Tested</strong>
+                                <span>공인 기관의 임상시험을 통해 입증된 제품 기준</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="panel">
                     <p class="section-kicker">In The App</p>
                     <h2 class="section-title">앱 안에서 보게 될 핵심 콘텐츠</h2>
                     <p class="section-desc">광고에서 들어온 사용자가 설치 전에도 앱의 구성을 떠올릴 수 있도록, 대표 탐색 영역을 카드 형태로 미리 보여줍니다.</p>
@@ -791,7 +1103,7 @@
                     <div class="content-grid">
                         <article class="content-item">
                             <strong><span>인기 브랜드</span><span>Premium</span></strong>
-                            <p>백화점 프리미엄 K-뷰티 브랜드를 보기 좋게 모아두어 원하는 브랜드를 빠르게 찾을 수 있습니다.</p>
+                            <p>비건, 유기농, 글로벌 브랜드, 더마 카테고리 중심으로 입점 기준을 통과한 브랜드를 빠르게 찾을 수 있습니다.</p>
                         </article>
                         <article class="content-item">
                             <strong><span>오늘의 혜택</span><span>Today</span></strong>
@@ -799,7 +1111,7 @@
                         </article>
                         <article class="content-item">
                             <strong><span>라이브 예정</span><span>Live</span></strong>
-                            <p>다가오는 라이브 일정과 주요 브랜드 편성을 미리 보고 관심 방송을 기다릴 수 있습니다.</p>
+                            <p>다가오는 라이브 일정과 엄선 브랜드 편성을 미리 보고 관심 방송을 기다릴 수 있습니다.</p>
                         </article>
                         <article class="content-item">
                             <strong><span>베스트 상품</span><span>Best</span></strong>
