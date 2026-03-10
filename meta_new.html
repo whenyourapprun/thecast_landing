@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>더캐스트 | 백화점 프리미엄 K-뷰티를 라이브로 만나는 앱</title>
-    <meta name="description" content="엄선된 프리미엄 K-뷰티 브랜드, 실시간 라이브 리뷰, 앱 전용 혜택을 더캐스트에서 만나보세요.">
+    <meta name="description" content="백화점 프리미엄 K-뷰티를 라이브로 만나고, 단독 특가와 실시간 리뷰, 앱 전용 혜택을 더캐스트에서 확인하세요.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="더캐스트 | 백화점 프리미엄 K-뷰티를 라이브로 만나는 앱">
-    <meta property="og:description" content="엄선된 브랜드, 실시간 라이브 리뷰, 단독 혜택을 더캐스트에서 확인하세요.">
+    <meta property="og:description" content="백화점 프리미엄 K-뷰티 라이브 쇼핑, 단독 특가, 실시간 리뷰를 더캐스트 앱에서 바로 이어보세요.">
     <meta property="og:image" content="thecast_logo.png">
     <meta name="theme-color" content="#98FB98">
     <link rel="icon" type="image/x-icon" href="thecast_logo.png">
@@ -209,6 +209,26 @@
             max-width: 34rem;
         }
 
+        .ad-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .ad-flow span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(152, 251, 152, 0.2);
+            border: 1px solid rgba(69, 123, 69, 0.14);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
         .cta-note {
             margin-top: 14px;
             display: inline-flex;
@@ -222,8 +242,25 @@
             font-weight: 700;
         }
 
+        .cta-panel {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 22px;
+            border: 1px solid rgba(69, 123, 69, 0.18);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(236, 255, 236, 0.92));
+            box-shadow: 0 18px 34px -28px rgba(63, 118, 63, 0.26);
+        }
+
+        .cta-caption {
+            margin: 0 0 12px;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         .hero-actions {
-            margin-top: 20px;
+            margin-top: 0;
             display: grid;
             gap: 12px;
         }
@@ -286,6 +323,24 @@
         .store-arrow {
             font-size: 1.2rem;
             opacity: 0.82;
+        }
+
+        .cta-footnote {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cta-footnote span {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(152, 251, 152, 0.18);
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: 700;
         }
 
         .hero-proof {
@@ -872,13 +927,38 @@
                             </div>
                         </div>
 
-                        <h1>백화점 프리미엄 K-뷰티를 라이브로 만나는 앱</h1>
-                        <p class="hero-subcopy">엄선된 브랜드, 실시간 라이브 리뷰, 앱 전용 혜택을 더캐스트에서 확인하세요. 오늘 주목할 뷰티 브랜드와 라이브 특가를 한 번에 탐색할 수 있습니다.</p>
-                        <div class="cta-note">앱 전용 혜택과 라이브 특가 만나보기</div>
+                        <div class="ad-flow" aria-label="광고 핵심 메시지">
+                            <span>백화점 뷰티 라이브 쇼핑</span>
+                            <span>단독 특가</span>
+                            <span>실시간 리뷰</span>
+                        </div>
 
-                        <div class="hero-actions">
-                            <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
-                                class="store-button" aria-label="App Store에서 더캐스트 다운로드">
+                        <h1>백화점 프리미엄 K-뷰티를 라이브로 만나는 앱</h1>
+                        <p class="hero-subcopy">단독 특가, 실시간 리뷰, 엄선된 브랜드를 더캐스트에서 확인하세요. 인스타 광고에서 보던 라이브 쇼핑 흐름을 앱에서 바로 이어볼 수 있습니다.</p>
+                        <div class="cta-note">광고에서 본 라이브와 특가를 지금 앱에서 바로 확인</div>
+
+                        <div class="hero-proof" aria-label="광고 메시지 재연결">
+                            <div class="proof-item">
+                                <strong>단독 특가</strong>
+                                <span>라이브에서만 열리는 한정 가격과 구성 혜택</span>
+                            </div>
+                            <div class="proof-item">
+                                <strong>실시간 리뷰</strong>
+                                <span>방송 중 반응과 사용 포인트를 빠르게 확인</span>
+                            </div>
+                            <div class="proof-item">
+                                <strong>앱 전용 혜택</strong>
+                                <span>설치 후 바로 확인하는 신규 회원 혜택과 오퍼</span>
+                            </div>
+                        </div>
+
+                        <div class="cta-panel">
+                            <p class="cta-caption">신규 회원 혜택 확인하기. 앱 전용 혜택과 라이브 특가를 바로 만나보세요.</p>
+                            <div class="hero-actions">
+                                <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
+                                    class="store-button" aria-label="App Store에서 더캐스트 다운로드"
+                                    data-track-event="meta_appstore_click" data-track-store="appstore"
+                                    data-track-placement="hero">
                                 <div class="store-copy">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
                                         alt="Apple 로고">
@@ -890,31 +970,24 @@
                                 <span class="store-arrow" aria-hidden="true">↗</span>
                             </a>
                             <a href="https://play.google.com/store/apps/details?id=com.blacksmith.castshop"
-                                class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드">
+                                class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드"
+                                data-track-event="meta_playstore_click" data-track-store="playstore"
+                                data-track-placement="hero">
                                 <div class="store-copy">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
                                         alt="Google Play 로고">
                                     <div>
                                         <strong>Google Play에서 다운로드</strong>
-                                        <span>라이브 특가와 앱 전용 혜택 보기</span>
+                                        <span>앱 전용 혜택과 라이브 특가 만나보기</span>
                                     </div>
                                 </div>
                                 <span class="store-arrow" aria-hidden="true">↗</span>
                             </a>
-                        </div>
-
-                        <div class="hero-proof" aria-label="핵심 신뢰 포인트">
-                            <div class="proof-item">
-                                <strong>엄격한 입점 기준 셀렉션</strong>
-                                <span>비건, 유기농, 더마 등 기준을 통과한 브랜드 큐레이션</span>
                             </div>
-                            <div class="proof-item">
-                                <strong>라이브 혜택</strong>
-                                <span>실시간 방송에서만 만나는 리뷰와 오퍼</span>
-                            </div>
-                            <div class="proof-item">
-                                <strong>앱 전용 특가</strong>
-                                <span>지금 설치해야 볼 수 있는 한정 혜택</span>
+                            <div class="cta-footnote" aria-label="다운로드 이유">
+                                <span>앱 전용 혜택</span>
+                                <span>라이브 특가</span>
+                                <span>실시간 리뷰</span>
                             </div>
                         </div>
                     </div>
@@ -923,8 +996,8 @@
                         <div class="preview-card">
                             <div class="preview-top">
                                 <div>
-                                    <strong>지금 앱에서 이런 화면을 만나게 됩니다</strong>
-                                    <span>캐릭터와 함께 더캐스트의 라이브 쇼핑 경험을 직관적으로 보여주는 미리보기</span>
+                                    <strong>앱 설치 전에 바로 이해되는 콘텐츠 미리보기</strong>
+                                    <span>광고에서 기대한 라이브 쇼핑, 특가, 리뷰 흐름이 앱 안에서 어떻게 보이는지 먼저 보여줍니다.</span>
                                 </div>
                                 <div class="live-pill">LIVE 20:00</div>
                             </div>
@@ -934,33 +1007,33 @@
                                     <img src="thecast_character.png" alt="더캐스트 캐릭터" class="mascot-image">
                                 </div>
                                 <div class="mascot-copy">
-                                    <strong>더캐스트 캐릭터가 전하는 라이브 쇼핑 무드</strong>
-                                    <p>라이브, 혜택, 쇼핑의 즐거움을 보다 친근하게 전달하면서도 전체 톤은 프리미엄 K-뷰티 플랫폼 감도를 유지하도록 구성했습니다.</p>
+                                    <strong>첫 화면에서 다운로드해야 할 이유가 바로 보이게</strong>
+                                    <p>광고를 클릭한 직후 사용자가 찾는 것은 서비스 설명보다 라이브, 특가, 리뷰 경험입니다. 그 흐름이 첫 화면에서 끊기지 않도록 구성했습니다.</p>
                                     <div class="mascot-badges" aria-label="캐릭터 메시지">
-                                        <span class="mascot-badge">LIVE 큐레이션</span>
-                                        <span class="mascot-badge">앱 전용 혜택</span>
-                                        <span class="mascot-badge">친근한 브랜드 경험</span>
+                                        <span class="mascot-badge">오늘의 라이브</span>
+                                        <span class="mascot-badge">앱 전용 특가</span>
+                                        <span class="mascot-badge">베스트 상품</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="feature-grid">
                                 <article class="feature-card">
+                                    <span class="feature-label">오늘의 라이브</span>
+                                    <strong>지금 열리는 백화점 뷰티 라이브 방송 확인</strong>
+                                    <p>광고에서 보고 들어온 라이브 흐름을 끊지 않고 바로 이어서 탐색할 수 있습니다.</p>
+                                </article>
+
+                                <article class="feature-card">
                                     <span class="feature-label">인기 브랜드</span>
-                                    <strong>비건, 유기농, 더마, 글로벌 브랜드 셀렉션</strong>
-                                    <p>더캐스트 입점 기준을 통과한 K-뷰티 브랜드를 한 곳에서 탐색하고 라이브로 확인합니다.</p>
+                                    <strong>엄선된 프리미엄 뷰티 브랜드 셀렉션</strong>
+                                    <p>입점 기준을 통과한 프리미엄 브랜드를 보기 좋게 모아 빠르게 탐색할 수 있습니다.</p>
                                 </article>
 
                                 <article class="feature-card">
-                                    <span class="feature-label">오늘의 혜택</span>
-                                    <strong>신규 회원 전용 쿠폰과 라이브 한정 오퍼</strong>
-                                    <p>첫 설치 후 바로 확인할 수 있는 앱 전용 보상과 프로모션을 강조합니다.</p>
-                                </article>
-
-                                <article class="feature-card">
-                                    <span class="feature-label">라이브 예정</span>
-                                    <strong>엄선 브랜드 라이브 셀렉션</strong>
-                                    <p>전문 호스트가 브랜드 스토리, 사용감, 추천 포인트와 구성 혜택을 실시간으로 소개합니다.</p>
+                                    <span class="feature-label">앱 전용 특가</span>
+                                    <strong>라이브 한정 혜택과 앱 전용 오퍼를 한 번에</strong>
+                                    <p>가격 메리트와 앱 설치 이유가 바로 보이도록 첫 화면 기대값과 연결합니다.</p>
                                     <div class="feature-inline">
                                         <span>오늘 저녁 8시</span>
                                         <span>실시간 Q&amp;A</span>
@@ -970,8 +1043,8 @@
 
                                 <article class="feature-card">
                                     <span class="feature-label">베스트 상품</span>
-                                    <strong>지금 가장 많이 저장하고 구매한 아이템</strong>
-                                    <p>고객 반응이 좋은 베스트셀러와 시즌 추천 조합을 빠르게 확인할 수 있습니다.</p>
+                                    <strong>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템</strong>
+                                    <p>단순 할인몰이 아니라 선택 이유가 있는 프리미엄 상품 탐색 경험을 전달합니다.</p>
                                 </article>
                             </div>
                         </div>
@@ -983,20 +1056,20 @@
                 <div class="panel">
                     <p class="section-kicker">Why The Cast</p>
                     <h2 class="section-title">왜 지금 더캐스트를 설치해야 하는지 한눈에 보이게</h2>
-                    <p class="section-desc">단순한 쇼핑 앱이 아니라, 프리미엄 K-뷰티를 더 빠르게 이해하고 더 좋은 혜택으로 만나는 라이브 플랫폼이라는 점을 첫 화면에서 바로 전달합니다.</p>
+                    <p class="section-desc">광고 유입 사용자가 설치 전에 신뢰할 수 있도록, 프리미엄 브랜드 셀렉션과 라이브 혜택, 앱 전용 특가를 간결하게 정리했습니다.</p>
 
                     <div class="trust-grid">
                         <article class="trust-card">
-                            <strong>엄격한 입점 기준 셀렉션</strong>
-                            <p>비건, 유기농, 크루얼티 프리, 더마 등 내부 입점 기준을 바탕으로 선별해 탐색 신뢰도를 높입니다.</p>
+                            <strong>프리미엄 브랜드 셀렉션</strong>
+                            <p>입점 기준을 통과한 브랜드 중심으로 구성해 일반 할인몰과 다른 탐색 신뢰도를 전달합니다.</p>
                         </article>
                         <article class="trust-card">
                             <strong>라이브 혜택</strong>
-                            <p>방송 중 실시간 소개와 함께 구성, 사용감, 추천 포인트를 밀도 있게 확인할 수 있습니다.</p>
+                            <p>방송 중 실시간 소개와 함께 구성 혜택, 사용 포인트, 리뷰 흐름을 바로 확인할 수 있습니다.</p>
                         </article>
                         <article class="trust-card">
                             <strong>앱 전용 특가</strong>
-                            <p>앱 설치 후 바로 확인하는 전용 혜택으로 광고 유입 사용자의 전환 동기를 높입니다.</p>
+                            <p>설치 직후 확인 가능한 전용 혜택으로 광고 클릭 이후의 전환 동기를 더 강하게 만듭니다.</p>
                         </article>
                     </div>
                 </div>
@@ -1098,24 +1171,24 @@
                 <div class="panel">
                     <p class="section-kicker">In The App</p>
                     <h2 class="section-title">앱 안에서 보게 될 핵심 콘텐츠</h2>
-                    <p class="section-desc">광고에서 들어온 사용자가 설치 전에도 앱의 구성을 떠올릴 수 있도록, 대표 탐색 영역을 카드 형태로 미리 보여줍니다.</p>
+                    <p class="section-desc">설치 전에도 사용자가 앱 안에서 무엇을 보게 되는지 바로 이해할 수 있도록, 주요 탐색 화면을 목업 카드로 정리했습니다.</p>
 
                     <div class="content-grid">
                         <article class="content-item">
+                            <strong><span>오늘의 라이브</span><span>Live</span></strong>
+                            <p>오늘 열리는 백화점 뷰티 라이브 편성과 실시간 방송 혜택을 빠르게 확인할 수 있습니다.</p>
+                        </article>
+                        <article class="content-item">
                             <strong><span>인기 브랜드</span><span>Premium</span></strong>
-                            <p>비건, 유기농, 글로벌 브랜드, 더마 카테고리 중심으로 입점 기준을 통과한 브랜드를 빠르게 찾을 수 있습니다.</p>
+                            <p>엄선된 프리미엄 브랜드를 한눈에 탐색하고 관심 브랜드를 빠르게 찾을 수 있습니다.</p>
                         </article>
                         <article class="content-item">
-                            <strong><span>오늘의 혜택</span><span>Today</span></strong>
-                            <p>앱 전용 쿠폰, 첫 구매 혜택, 기간 한정 특가를 한 화면에서 바로 확인할 수 있습니다.</p>
-                        </article>
-                        <article class="content-item">
-                            <strong><span>라이브 예정</span><span>Live</span></strong>
-                            <p>다가오는 라이브 일정과 엄선 브랜드 편성을 미리 보고 관심 방송을 기다릴 수 있습니다.</p>
+                            <strong><span>앱 전용 특가</span><span>Only App</span></strong>
+                            <p>앱에서만 열리는 한정 오퍼와 신규 회원 혜택을 한 화면에서 확인할 수 있습니다.</p>
                         </article>
                         <article class="content-item">
                             <strong><span>베스트 상품</span><span>Best</span></strong>
-                            <p>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템을 중심으로 신뢰감 있게 탐색할 수 있습니다.</p>
+                            <p>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템 중심으로 빠르게 탐색할 수 있습니다.</p>
                         </article>
                     </div>
                 </div>
@@ -1129,7 +1202,9 @@
 
                     <div class="download-actions">
                         <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
-                            class="store-button" aria-label="App Store에서 더캐스트 다운로드">
+                            class="store-button" aria-label="App Store에서 더캐스트 다운로드"
+                            data-track-event="meta_appstore_click" data-track-store="appstore"
+                            data-track-placement="download">
                             <div class="store-copy">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
                                     alt="Apple 로고">
@@ -1141,7 +1216,9 @@
                             <span class="store-arrow" aria-hidden="true">↗</span>
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.blacksmith.castshop"
-                            class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드">
+                            class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드"
+                            data-track-event="meta_playstore_click" data-track-store="playstore"
+                            data-track-placement="download">
                             <div class="store-copy">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
                                     alt="Google Play 로고">
@@ -1162,17 +1239,50 @@
         </main>
     </div>
 
+    <script>
+        (function () {
+            function safeTrack(eventName, params) {
+                try {
+                    if (typeof window.gtag === "function") {
+                        window.gtag("event", eventName, params);
+                    }
+                } catch (error) {
+                }
+
+                try {
+                    if (typeof window.fbq === "function") {
+                        window.fbq("trackCustom", eventName, params);
+                    }
+                } catch (error) {
+                }
+            }
+
+            function bindTrackers() {
+                var buttons = document.querySelectorAll("[data-track-event]");
+
+                buttons.forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        safeTrack(button.getAttribute("data-track-event"), {
+                            store: button.getAttribute("data-track-store") || "",
+                            placement: button.getAttribute("data-track-placement") || "unknown"
+                        });
+                    });
+                });
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", bindTrackers);
+            } else {
+                bindTrackers();
+            }
+        }());
+    </script>
+
     <!--
-    브랜딩 중심 B안 카피 대체 문구
-
-    메인 헤드라인:
-    프리미엄 K-뷰티의 순간을 가장 감각적으로 만나는 방법
-
-    서브카피:
-    백화점 감도의 뷰티 브랜드와 라이브 콘텐츠, 그리고 앱에서만 누릴 수 있는 혜택을 더캐스트에서 경험해보세요.
-
-    CTA 보조 문구:
-    지금 앱에서 브랜드 큐레이션과 라이브 혜택 살펴보기
+    추가 A/B 테스트용 헤드라인 3개
+    1. 백화점 프리미엄 K-뷰티 라이브 쇼핑, 더캐스트 앱에서 바로 시작하세요
+    2. 단독 특가와 실시간 리뷰를 한 번에 보는 백화점 뷰티 앱
+    3. 광고에서 본 백화점 뷰티 라이브, 지금 더캐스트 앱에서 이어보기
     -->
 </body>
 
