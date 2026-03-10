@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더캐스트 | 백화점 프리미엄 K-뷰티를 라이브로 만나는 앱</title>
+    <meta name="description" content="엄선된 프리미엄 K-뷰티 브랜드, 실시간 라이브 리뷰, 앱 전용 혜택을 더캐스트에서 만나보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="더캐스트 | 백화점 프리미엄 K-뷰티를 라이브로 만나는 앱">
+    <meta property="og:description" content="엄선된 브랜드, 실시간 라이브 리뷰, 단독 혜택을 더캐스트에서 확인하세요.">
+    <meta property="og:image" content="thecast_logo.png">
+    <meta name="theme-color" content="#f4efe7">
+    <link rel="icon" type="image/x-icon" href="thecast_logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="thecast_logo.png">
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f5f0e8;
+            --bg-soft: #f9f5ef;
+            --surface: rgba(255, 255, 255, 0.8);
+            --surface-strong: rgba(255, 255, 255, 0.92);
+            --surface-dark: #1f2421;
+            --line: rgba(59, 77, 63, 0.12);
+            --line-strong: rgba(59, 77, 63, 0.2);
+            --text: #1f2a23;
+            --muted: #5b665d;
+            --accent: #284d3a;
+            --accent-soft: #dfe8de;
+            --accent-warm: #b98a5f;
+            --shadow: 0 24px 80px -36px rgba(42, 54, 46, 0.28);
+            --radius-lg: 28px;
+            --radius-md: 22px;
+            --radius-sm: 16px;
+            --max-width: 1160px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(190, 205, 190, 0.45), transparent 32%),
+                radial-gradient(circle at top right, rgba(225, 206, 182, 0.38), transparent 28%),
+                linear-gradient(180deg, #fbf8f3 0%, #f3ece3 48%, #efe7de 100%);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            width: min(var(--max-width), calc(100% - 32px));
+            margin: 0 auto;
+            padding: 20px 0 56px;
+        }
+
+        .frame {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            border-radius: 32px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.68));
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .frame::before,
+        .frame::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .frame::before {
+            top: -120px;
+            left: -90px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(205, 221, 210, 0.74), rgba(205, 221, 210, 0));
+        }
+
+        .frame::after {
+            right: -90px;
+            bottom: -120px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(221, 201, 181, 0.58), rgba(221, 201, 181, 0));
+        }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 20px 18px 18px;
+        }
+
+        .hero-shell {
+            display: grid;
+            gap: 18px;
+        }
+
+        .hero-copy,
+        .hero-preview {
+            position: relative;
+        }
+
+        .eyebrow-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--line);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand-inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .brand-inline img {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 10px 20px -14px rgba(33, 42, 36, 0.35);
+        }
+
+        .brand-lockup {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .brand-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            object-fit: cover;
+            box-shadow: 0 18px 32px -22px rgba(40, 77, 58, 0.4);
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+
+        .brand-name small {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 8.5vw, 3.8rem);
+            line-height: 1.08;
+            letter-spacing: -0.05em;
+            max-width: 10ch;
+        }
+
+        .hero-subcopy {
+            margin: 16px 0 0;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--muted);
+            max-width: 34rem;
+        }
+
+        .cta-note {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(40, 77, 58, 0.08);
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            margin-top: 20px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .store-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 15px 16px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #253f31 0%, #345a45 100%);
+            box-shadow: 0 20px 42px -24px rgba(37, 63, 49, 0.62);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+        }
+
+        .store-button.secondary {
+            background: linear-gradient(135deg, #876746 0%, #b2875f 100%);
+            box-shadow: 0 20px 42px -24px rgba(135, 103, 70, 0.55);
+        }
+
+        .store-button:hover,
+        .store-button:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 24px 48px -24px rgba(33, 42, 36, 0.4);
+        }
+
+        .store-copy {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .store-copy img {
+            width: 22px;
+            height: 22px;
+            flex: none;
+        }
+
+        .store-copy strong,
+        .store-copy span {
+            display: block;
+        }
+
+        .store-copy strong {
+            font-size: 0.98rem;
+            line-height: 1.2;
+        }
+
+        .store-copy span {
+            margin-top: 2px;
+            font-size: 0.74rem;
+            opacity: 0.78;
+        }
+
+        .store-arrow {
+            font-size: 1.2rem;
+            opacity: 0.82;
+        }
+
+        .hero-proof {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .proof-item {
+            padding: 14px 12px;
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.74);
+        }
+
+        .proof-item strong {
+            display: block;
+            font-size: 0.82rem;
+            line-height: 1.3;
+        }
+
+        .proof-item span {
+            display: block;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            line-height: 1.45;
+            color: var(--muted);
+        }
+
+        .preview-card {
+            padding: 18px;
+            border-radius: 26px;
+            background: linear-gradient(180deg, rgba(33, 40, 36, 0.98), rgba(48, 59, 51, 0.98));
+            color: #f8f6f0;
+            box-shadow: 0 28px 52px -32px rgba(27, 35, 30, 0.75);
+        }
+
+        .preview-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .preview-top strong {
+            display: block;
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .preview-top span {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.82rem;
+            color: rgba(248, 246, 240, 0.72);
+        }
+
+        .live-pill {
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: #fff0df;
+            white-space: nowrap;
+        }
+
+        .feature-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .feature-card {
+            padding: 14px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .feature-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .feature-card strong {
+            display: block;
+            margin-top: 12px;
+            font-size: 1rem;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+        }
+
+        .feature-card p {
+            margin: 8px 0 0;
+            font-size: 0.86rem;
+            line-height: 1.55;
+            color: rgba(248, 246, 240, 0.72);
+        }
+
+        .feature-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .feature-inline span {
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.74rem;
+            color: rgba(248, 246, 240, 0.84);
+        }
+
+        .section {
+            position: relative;
+            z-index: 1;
+            padding: 0 18px 18px;
+        }
+
+        .panel {
+            padding: 18px;
+            border-radius: var(--radius-lg);
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 18px 40px -34px rgba(31, 42, 35, 0.28);
+            backdrop-filter: blur(14px);
+        }
+
+        .panel + .panel {
+            margin-top: 14px;
+        }
+
+        .section-kicker {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.22;
+            letter-spacing: -0.04em;
+        }
+
+        .section-desc {
+            margin: 10px 0 0;
+            color: var(--muted);
+            font-size: 0.96rem;
+            line-height: 1.65;
+        }
+
+        .trust-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .trust-card {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: var(--surface-strong);
+        }
+
+        .trust-card strong {
+            display: block;
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .trust-card p {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .content-item {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 247, 243, 0.92));
+        }
+
+        .content-item strong {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .content-item strong span:last-child {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent-warm);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .content-item p {
+            margin: 10px 0 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.58;
+        }
+
+        .download-panel {
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.24), transparent 30%),
+                linear-gradient(135deg, #24362e 0%, #395746 100%);
+            color: #f7f2ea;
+        }
+
+        .download-panel .section-kicker,
+        .download-panel .section-desc {
+            color: rgba(247, 242, 234, 0.8);
+        }
+
+        .download-panel .section-title {
+            color: #fff;
+        }
+
+        .download-panel .section-kicker {
+            opacity: 0.88;
+        }
+
+        .download-actions {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .download-tip {
+            margin-top: 14px;
+            font-size: 0.84rem;
+            line-height: 1.6;
+            color: rgba(247, 242, 234, 0.72);
+        }
+
+        .footer {
+            position: relative;
+            z-index: 1;
+            padding: 6px 18px 0;
+            text-align: center;
+            color: rgba(31, 42, 35, 0.58);
+            font-size: 0.8rem;
+        }
+
+        @media (min-width: 760px) {
+            .page {
+                padding: 28px 0 72px;
+            }
+
+            .hero {
+                padding: 28px 28px 20px;
+            }
+
+            .hero-shell {
+                grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+                align-items: center;
+                gap: 22px;
+            }
+
+            .hero-actions,
+            .download-actions {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .trust-grid,
+            .content-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .content-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .section {
+                padding: 0 28px 24px;
+            }
+
+            .panel {
+                padding: 24px;
+            }
+
+            .footer {
+                padding: 2px 28px 0;
+            }
+        }
+
+        @media (min-width: 1080px) {
+            .hero {
+                padding: 34px 34px 24px;
+            }
+
+            .section {
+                padding: 0 34px 24px;
+            }
+
+            .hero-shell {
+                gap: 30px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page {
+                width: min(100% - 18px, var(--max-width));
+                padding-top: 10px;
+                padding-bottom: 28px;
+            }
+
+            .frame {
+                border-radius: 26px;
+            }
+
+            .hero,
+            .section {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .eyebrow-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-proof {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <main class="frame">
+            <section class="hero">
+                <div class="hero-shell">
+                    <div class="hero-copy">
+                        <div class="eyebrow-row">
+                            <span class="eyebrow">Premium K-Beauty Live App</span>
+                            <div class="brand-inline" aria-label="브랜드 협업">
+                                <img src="thecast_logo.png" alt="더캐스트 로고">
+                                <span>THE CAST x LOTTE</span>
+                            </div>
+                        </div>
+
+                        <div class="brand-lockup">
+                            <img src="thecast_logo.png" alt="더캐스트 아이콘" class="brand-logo">
+                            <div class="brand-name">
+                                더캐스트
+                                <small>THE CAST</small>
+                            </div>
+                        </div>
+
+                        <h1>백화점 프리미엄 K-뷰티를 라이브로 만나는 앱</h1>
+                        <p class="hero-subcopy">엄선된 브랜드, 실시간 라이브 리뷰, 앱 전용 혜택을 더캐스트에서 확인하세요. 오늘 주목할 뷰티 브랜드와 라이브 특가를 한 번에 탐색할 수 있습니다.</p>
+                        <div class="cta-note">앱 전용 혜택과 라이브 특가 만나보기</div>
+
+                        <div class="hero-actions">
+                            <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
+                                class="store-button" aria-label="App Store에서 더캐스트 다운로드">
+                                <div class="store-copy">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple 로고">
+                                    <div>
+                                        <strong>App Store에서 다운로드</strong>
+                                        <span>신규 회원 혜택 확인하기</span>
+                                    </div>
+                                </div>
+                                <span class="store-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.blacksmith.castshop"
+                                class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드">
+                                <div class="store-copy">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+                                        alt="Google Play 로고">
+                                    <div>
+                                        <strong>Google Play에서 다운로드</strong>
+                                        <span>라이브 특가와 앱 전용 혜택 보기</span>
+                                    </div>
+                                </div>
+                                <span class="store-arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-proof" aria-label="핵심 신뢰 포인트">
+                            <div class="proof-item">
+                                <strong>프리미엄 브랜드 셀렉션</strong>
+                                <span>백화점 감도의 엄선된 K-뷰티 큐레이션</span>
+                            </div>
+                            <div class="proof-item">
+                                <strong>라이브 혜택</strong>
+                                <span>실시간 방송에서만 만나는 리뷰와 오퍼</span>
+                            </div>
+                            <div class="proof-item">
+                                <strong>앱 전용 특가</strong>
+                                <span>지금 설치해야 볼 수 있는 한정 혜택</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-preview">
+                        <div class="preview-card">
+                            <div class="preview-top">
+                                <div>
+                                    <strong>지금 앱에서 이런 화면을 만나게 됩니다</strong>
+                                    <span>프리미엄 K-뷰티를 빠르게 이해하도록 구성한 미리보기</span>
+                                </div>
+                                <div class="live-pill">LIVE 20:00</div>
+                            </div>
+
+                            <div class="feature-grid">
+                                <article class="feature-card">
+                                    <span class="feature-label">인기 브랜드</span>
+                                    <strong>설화수, 라메르, 에스티 로더, 조선미녀</strong>
+                                    <p>백화점에서 찾던 프리미엄 브랜드를 한 곳에서 비교하고 라이브로 확인합니다.</p>
+                                </article>
+
+                                <article class="feature-card">
+                                    <span class="feature-label">오늘의 혜택</span>
+                                    <strong>신규 회원 전용 쿠폰과 라이브 한정 오퍼</strong>
+                                    <p>첫 설치 후 바로 확인할 수 있는 앱 전용 보상과 프로모션을 강조합니다.</p>
+                                </article>
+
+                                <article class="feature-card">
+                                    <span class="feature-label">라이브 예정</span>
+                                    <strong>롯데백화점 뷰티 셀렉션 라이브</strong>
+                                    <p>전문 호스트가 사용감, 추천 포인트, 구성 혜택을 실시간으로 소개합니다.</p>
+                                    <div class="feature-inline">
+                                        <span>오늘 저녁 8시</span>
+                                        <span>실시간 Q&amp;A</span>
+                                        <span>방송 한정 특가</span>
+                                    </div>
+                                </article>
+
+                                <article class="feature-card">
+                                    <span class="feature-label">베스트 상품</span>
+                                    <strong>지금 가장 많이 저장하고 구매한 아이템</strong>
+                                    <p>고객 반응이 좋은 베스트셀러와 시즌 추천 조합을 빠르게 확인할 수 있습니다.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="panel">
+                    <p class="section-kicker">Why The Cast</p>
+                    <h2 class="section-title">왜 지금 더캐스트를 설치해야 하는지 한눈에 보이게</h2>
+                    <p class="section-desc">단순한 쇼핑 앱이 아니라, 프리미엄 K-뷰티를 더 빠르게 이해하고 더 좋은 혜택으로 만나는 라이브 플랫폼이라는 점을 첫 화면에서 바로 전달합니다.</p>
+
+                    <div class="trust-grid">
+                        <article class="trust-card">
+                            <strong>프리미엄 브랜드 셀렉션</strong>
+                            <p>신뢰할 수 있는 브랜드 중심으로 큐레이션해 처음 방문한 사용자도 탐색이 쉽습니다.</p>
+                        </article>
+                        <article class="trust-card">
+                            <strong>라이브 혜택</strong>
+                            <p>방송 중 실시간 소개와 함께 구성, 사용감, 추천 포인트를 밀도 있게 확인할 수 있습니다.</p>
+                        </article>
+                        <article class="trust-card">
+                            <strong>앱 전용 특가</strong>
+                            <p>앱 설치 후 바로 확인하는 전용 혜택으로 광고 유입 사용자의 전환 동기를 높입니다.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="panel">
+                    <p class="section-kicker">In The App</p>
+                    <h2 class="section-title">앱 안에서 보게 될 핵심 콘텐츠</h2>
+                    <p class="section-desc">광고에서 들어온 사용자가 설치 전에도 앱의 구성을 떠올릴 수 있도록, 대표 탐색 영역을 카드 형태로 미리 보여줍니다.</p>
+
+                    <div class="content-grid">
+                        <article class="content-item">
+                            <strong><span>인기 브랜드</span><span>Premium</span></strong>
+                            <p>백화점 프리미엄 K-뷰티 브랜드를 보기 좋게 모아두어 원하는 브랜드를 빠르게 찾을 수 있습니다.</p>
+                        </article>
+                        <article class="content-item">
+                            <strong><span>오늘의 혜택</span><span>Today</span></strong>
+                            <p>앱 전용 쿠폰, 첫 구매 혜택, 기간 한정 특가를 한 화면에서 바로 확인할 수 있습니다.</p>
+                        </article>
+                        <article class="content-item">
+                            <strong><span>라이브 예정</span><span>Live</span></strong>
+                            <p>다가오는 라이브 일정과 주요 브랜드 편성을 미리 보고 관심 방송을 기다릴 수 있습니다.</p>
+                        </article>
+                        <article class="content-item">
+                            <strong><span>베스트 상품</span><span>Best</span></strong>
+                            <p>지금 많이 보는 상품과 리뷰 반응이 좋은 아이템을 중심으로 신뢰감 있게 탐색할 수 있습니다.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="panel download-panel">
+                    <p class="section-kicker">Download</p>
+                    <h2 class="section-title">지금 앱에서 확인하세요</h2>
+                    <p class="section-desc">신규 회원 혜택, 앱 전용 특가, 라이브 커머스 편성까지. 더캐스트 앱에서 프리미엄 K-뷰티를 가장 빠르게 만나보세요.</p>
+
+                    <div class="download-actions">
+                        <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"
+                            class="store-button" aria-label="App Store에서 더캐스트 다운로드">
+                            <div class="store-copy">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                    alt="Apple 로고">
+                                <div>
+                                    <strong>App Store에서 다운로드</strong>
+                                    <span>신규 회원 혜택 확인하기</span>
+                                </div>
+                            </div>
+                            <span class="store-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.blacksmith.castshop"
+                            class="store-button secondary" aria-label="Google Play에서 더캐스트 다운로드">
+                            <div class="store-copy">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+                                    alt="Google Play 로고">
+                                <div>
+                                    <strong>Google Play에서 다운로드</strong>
+                                    <span>앱 전용 혜택과 라이브 특가 보기</span>
+                                </div>
+                            </div>
+                            <span class="store-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+
+                    <p class="download-tip">광고에서 바로 넘어온 사용자도 서비스 이해, 혜택 인지, 신뢰 포인트 확인까지 3초 안에 이어지도록 설계한 전환 중심 A안입니다.</p>
+                </div>
+            </section>
+
+            <p class="footer">&copy; 2026 Blacksmith Co.Ltd.</p>
+        </main>
+    </div>
+
+    <!--
+    브랜딩 중심 B안 카피 대체 문구
+
+    메인 헤드라인:
+    프리미엄 K-뷰티의 순간을 가장 감각적으로 만나는 방법
+
+    서브카피:
+    백화점 감도의 뷰티 브랜드와 라이브 콘텐츠, 그리고 앱에서만 누릴 수 있는 혜택을 더캐스트에서 경험해보세요.
+
+    CTA 보조 문구:
+    지금 앱에서 브랜드 큐레이션과 라이브 혜택 살펴보기
+    -->
+</body>
+
+</html>
