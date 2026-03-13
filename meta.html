@@ -146,20 +146,40 @@
 
         .brand-inline {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.78rem;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
             color: var(--muted);
-            white-space: nowrap;
+        }
+
+        .brand-inline-icons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .brand-inline img {
-            width: 32px;
-            height: 32px;
-            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
             object-fit: cover;
             border: 1px solid rgba(255, 255, 255, 0.85);
             box-shadow: 0 10px 20px -14px rgba(33, 42, 36, 0.35);
+        }
+
+        .brand-inline-x {
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--accent);
+        }
+
+        .brand-inline-label {
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            color: var(--muted);
+            white-space: nowrap;
         }
 
         .brand-lockup {
@@ -816,8 +836,11 @@
             }
 
             .brand-inline {
-                white-space: normal;
-                font-size: 0.74rem;
+                align-items: flex-start;
+            }
+
+            .brand-inline-label {
+                font-size: 0.62rem;
             }
 
             .brand-lockup {
@@ -1050,8 +1073,12 @@
                         <div class="eyebrow-row">
                             <span class="eyebrow">Premium Beauty Live App</span>
                             <div class="brand-inline" aria-label="브랜드 협업">
-                                <img src="thecast_logo.png" alt="더캐스트 로고">
-                                <span>THE CAST x LOTTE</span>
+                                <div class="brand-inline-icons">
+                                    <img src="thecast_logo.png" alt="더캐스트 아이콘">
+                                    <span class="brand-inline-x" aria-hidden="true">x</span>
+                                    <img src="https://www.lotteshopping.com/resources/img/favicon/favicon.png" alt="롯데백화점 아이콘">
+                                </div>
+                                <span class="brand-inline-label">THE CAST x LOTTE</span>
                             </div>
                         </div>
 
