@@ -94,7 +94,13 @@
         h1 {
             margin: 0 0 18px;
             font-size: clamp(2.1rem, 5vw, 2.5rem);
+            line-height: 1.2;
             letter-spacing: -0.01em;
+            max-width: 13ch;
+            text-wrap: balance;
+            word-break: keep-all;
+            margin-left: auto;
+            margin-right: auto;
             position: relative;
             z-index: 1;
         }
@@ -104,8 +110,8 @@
             font-size: 1.05rem;
             color: var(--text-secondary);
             line-height: 1.6;
-            max-width: none;
-            white-space: nowrap;
+            max-width: 34ch;
+            white-space: normal;
             position: relative;
             z-index: 1;
         }
@@ -129,6 +135,8 @@
             font-size: 1rem;
             color: #fff;
             text-decoration: none;
+            width: 100%;
+            min-height: 54px;
             transition: transform 0.2s ease, box-shadow 0.3s ease;
         }
 
@@ -164,21 +172,29 @@
                 padding: 36px 18px 44px;
             }
 
+            .app-icon {
+                width: 84px;
+                height: 84px;
+                border-radius: 20px;
+            }
+
             h1 {
-                font-size: clamp(1.7rem, 8vw, 2.1rem);
-                line-height: 1.24;
+                font-size: clamp(1.56rem, 7.8vw, 1.95rem);
+                line-height: 1.26;
+                max-width: 14ch;
             }
 
             p {
-                font-size: clamp(0.72rem, 3.2vw, 0.86rem);
+                font-size: clamp(0.92rem, 4vw, 1rem);
                 max-width: 100%;
-                line-height: 1.35;
-                white-space: nowrap;
+                line-height: 1.5;
+                white-space: normal;
             }
 
             .btn {
-                font-size: 0.94rem;
+                font-size: 0.95rem;
                 padding: 13px 16px;
+                min-height: 52px;
             }
         }
     </style>
@@ -190,8 +206,8 @@
             <img src="https://www.lotteshopping.com/resources/img/favicon/favicon.png" alt="롯데백화점 아이콘" class="app-icon">
             <img src="icon.png" alt="The Cast Icon" class="app-icon">
         </div>
-        <h1>롯데백화점 뷰티 에디션</h1>
-        <p>롯데백화점이 선별하고 더캐스트가 완성한 뷰티의 미학</p>
+        <h1>당신의 뷰티가 빛나는 순간, 더캐스트</h1>
+        <p>전문가의 안목, 롯데백화점의 선별. 더캐스트가 제안하는 새로운 기준을 확인하세요.</p>
 
         <div class="btn-group">
             <a href="https://apps.apple.com/us/app/%EB%8D%94%EC%BA%90%EC%8A%A4%ED%8A%B8/id6755375843"

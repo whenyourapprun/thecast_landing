@@ -198,7 +198,9 @@
             font-size: clamp(2rem, 8.5vw, 3.8rem);
             line-height: 1.08;
             letter-spacing: -0.05em;
-            max-width: 10ch;
+            max-width: 14ch;
+            text-wrap: balance;
+            word-break: keep-all;
         }
 
         .hero-subcopy {
@@ -273,6 +275,8 @@
             padding: 15px 16px;
             border-radius: 18px;
             text-decoration: none;
+            width: 100%;
+            min-height: 56px;
             color: #16301a;
             background: linear-gradient(135deg, #98FB98 0%, #84ef84 100%);
             box-shadow: 0 20px 42px -24px rgba(114, 208, 114, 0.52);
@@ -799,6 +803,137 @@
             font-size: 0.8rem;
         }
 
+        @media (max-width: 759px) {
+            .hero {
+                padding: 16px 14px 14px;
+            }
+
+            .eyebrow-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+
+            .brand-inline {
+                white-space: normal;
+                font-size: 0.74rem;
+            }
+
+            .brand-lockup {
+                margin-bottom: 14px;
+            }
+
+            .brand-logo {
+                width: 54px;
+                height: 54px;
+            }
+
+            h1 {
+                font-size: clamp(1.62rem, 7.2vw, 2.05rem);
+                line-height: 1.24;
+                max-width: 100%;
+            }
+
+            .hero-subcopy {
+                margin-top: 12px;
+                font-size: 0.95rem;
+                line-height: 1.55;
+                max-width: 100%;
+            }
+
+            .cta-note {
+                margin-top: 10px;
+                font-size: 0.82rem;
+                line-height: 1.35;
+            }
+
+            .hero-proof {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                margin-top: 12px;
+            }
+
+            .proof-item {
+                padding: 12px 11px;
+            }
+
+            .cta-panel {
+                margin-top: 14px;
+                padding: 12px;
+                border-radius: 18px;
+            }
+
+            .cta-caption {
+                font-size: 0.84rem;
+                line-height: 1.45;
+                margin-bottom: 10px;
+            }
+
+            .hero-actions {
+                gap: 10px;
+            }
+
+            .store-button {
+                padding: 13px 14px;
+                border-radius: 15px;
+                min-height: 52px;
+            }
+
+            .store-copy strong {
+                font-size: 0.9rem;
+            }
+
+            .store-copy span {
+                font-size: 0.72rem;
+                line-height: 1.35;
+            }
+
+            .store-copy img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .store-arrow {
+                font-size: 1.05rem;
+            }
+
+            .cta-footnote {
+                gap: 6px;
+                margin-top: 10px;
+            }
+
+            .cta-footnote span {
+                font-size: 0.72rem;
+                padding: 6px 9px;
+            }
+
+            .preview-card {
+                padding: 14px;
+            }
+
+            .preview-top {
+                margin-bottom: 12px;
+            }
+
+            .preview-top strong {
+                font-size: 0.95rem;
+            }
+
+            .preview-top span {
+                font-size: 0.78rem;
+                line-height: 1.45;
+            }
+
+            .mascot-stage {
+                min-height: 220px;
+            }
+
+            .feature-grid {
+                gap: 10px;
+            }
+        }
+
         @media (min-width: 760px) {
             .page {
                 padding: 28px 0 72px;
@@ -934,8 +1069,8 @@
                             <span>실시간 리뷰</span>
                         </div>
 
-                        <h1>백화점 프리미엄 뷰티를 라이브로 만나는 앱</h1>
-                        <p class="hero-subcopy">단독 특가, 실시간 리뷰, 엄선된 브랜드를 더캐스트에서 확인하세요. 인스타 광고에서 보던 라이브 쇼핑 흐름을 앱에서 바로 이어볼 수 있습니다.</p>
+                        <h1>당신의 뷰티가 빛나는 순간, 더캐스트</h1>
+                        <p class="hero-subcopy">전문가의 안목, 롯데백화점의 선별. 더캐스트가 제안하는 새로운 기준을 확인하세요.</p>
                         <div class="cta-note">광고에서 본 라이브와 특가를 지금 앱에서 바로 확인</div>
 
                         <div class="hero-proof" aria-label="광고 메시지 재연결">
